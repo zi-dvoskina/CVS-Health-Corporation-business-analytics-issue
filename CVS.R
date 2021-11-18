@@ -1,16 +1,7 @@
----
-html_document: default
-output:
-  pdf_document: default
-  html_document:
-    df_print: paged
-title: "Appendix - CVS regression models"
-fontsize: 10pt
----
 # Data Source:
 # CVS Health Corp.GuruFocus.com. 
 # https://www.gurufocus.com/stock/CVS/guru-trades
-```{r eval=TRUE}
+
 library(readxl)
 daily_10years <- read_excel("daily_10years.xlsx")
 plot(daily_10years$stock_price~daily_10years$t, 
@@ -36,4 +27,3 @@ plot(quarerly_10_years$diluted_EPS~quarerly_10_years$t,
      xlab="t", ylab="diluted EPS", main="diluted EPS vs t")
 plot(quarerly_10_years$diluted_EPS~quarerly_10_years$year, 
      xlab="t", ylab="diluted EPS", main="diluted EPS vs year")
-```
