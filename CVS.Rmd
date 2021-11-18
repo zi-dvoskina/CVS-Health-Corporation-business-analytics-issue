@@ -10,11 +10,14 @@ fontsize: 10pt
 # Data Source:
 # CVS Health Corp.GuruFocus.com. 
 # https://www.gurufocus.com/stock/CVS/guru-trades
+
 ```{r eval=TRUE}
 library(readxl)
 daily_10years <- read_excel("daily_10years.xlsx")
 plot(daily_10years$stock_price~daily_10years$t, 
      xlab="t", ylab="CVS stock price", main="CVS stock price vs t")
+     ![US Health Insurance Profits](https://user-images.githubusercontent.com/67168908/142474993-60752a64-54d1-46a2-a443-c3161a790b04.jpeg)
+
 plot(daily_10years$stock_price~daily_10years$year, 
      xlab="year", ylab="CVS stock price", main="CVS stock price vs year")
 model_stock_price_1 <- lm(stock_price~t+year+quarter+month+Aetna+COVID,data=daily_10years)
